@@ -8,7 +8,8 @@
   margin-bottom: 10px;
   margin-top: 10px;
   border-radius: 20px;
-
+  opacity: 0.6;
+  transition: 0.3s;
 }
 h3 {
   color: #224DE3;
@@ -21,9 +22,14 @@ p {
 button {
   background-color: #224DE3;
   color: white;
+  opacity: 0.6;
+  transition: 0.3s;
   border-radius: 20px;
   margin: 2px;
 }
+
+button:hover {opacity: 1}
+.App:hover {opacity: 1}
 
 .btnUpdate {
   width: 50%;
