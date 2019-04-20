@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { getSmurfs, addSmurf, deleteSmurf  } from '../actions';
+import { getSmurfs, addSmurf, deleteSmurf, updateSmurf } from '../actions';
 import { connect } from 'react-redux';
 import AddSmurfForm from '../components/addSmurfForm';
 import Smurf from '../smurf';
@@ -11,22 +11,32 @@ import Smurf from '../smurf';
  `How do I ensure that my component links the state to props?`
  */
 class App extends Component {
+  state = {
+    addingSmurf: false
+  }
 
   componentDidMount() {
     this.props.getSmurfs();
   }
-
+  toggleAdding = () => {
+    this.setState({addingSmurf: !this.state.addingSmurf})
+  }
   render() {
     return (
       <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Welcome to your Redux version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
-
-        <AddSmurfForm addSmurf={this.props.addSmurf}/>
+        {/* <AddSmurfForm addSmurf={this.props.addSmurf}/> */}
         
-        {this.props.smurfs.map(smurf => <Smurf smurf={smurf} deleteSmurf={this.props.deleteSmurf} />)}
+        {this.props.smurfs.map(smurf => 
+        // <Smurf smurf={smurf} deleteSmurf={this.props.deleteSmurf} />
+        <Smurf smurf={smurf} 
+          deleteSmurf={this.props.deleteSmurf} 
+          updateSmurf={this.props.updateSmurf} />)}
+
+        {this.state.addingSmurf ? 
+        <AddSmurfForm addSmurf={this.props.addSmurf} toggleAdding={this.toggleAdding}/>
+        :
+        <button onClick={this.toggleAdding}>Make more Smurf's</button>
+        }
       </div>
     );
   }
@@ -51,7 +61,8 @@ export default connect(
   {
     getSmurfs,
     addSmurf,
-    deleteSmurf
+    deleteSmurf,
+    updateSmurf
   }
 )(App);
 
