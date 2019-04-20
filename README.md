@@ -39,7 +39,6 @@ Follow these steps to set up your project:
 - [X] **Open** `src/index.js` to make sure that your app is ready to roll with the proper middleware.
 - [x] **cd** into `smurfs` and run `yarn` to retrieve the client side dependencies.
 - [x] **RUN** `yarn start` to fire up your React application. There ought to be a pretty little message awaiting you welcoming you to the app. `Follow` the prompting.
-- I dont see a message, just an error message 'Error: Expected the reducer to be a function.'
 
 **LOOK** at all the files you've been given for this project. One important file to note is `server.js`.
 We've added a typical `redux` file structure for you:
@@ -59,8 +58,8 @@ This file contains an **API** that you are going to be interfacing with. Below i
 
 Your finished project must include all of the following requirements:
 
-- [ ] Start in the `index.js` file by following all the prompts there to ensure that `Redux-Thunk` is wired up properly.
-- [ ] Because `Redux-Thunk` is wired up as a middleware for this project. Be sure to utilize thunks when appropriate:
+- [X] Start in the `index.js` file by following all the prompts there to ensure that `Redux-Thunk` is wired up properly.
+- [X] Because `Redux-Thunk` is wired up as a middleware for this project. Be sure to utilize thunks when appropriate:
 
 ```js
 return dispatch => {
@@ -75,8 +74,8 @@ return dispatch => {
 
 ### GET '/smurfs'
 
-- [ ] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
-- [ ] Double check that your response from the server is an array of smurfs.
+- [X] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
+- [X] Double check that your response from the server is an array of smurfs.
 
 ```js
 [
