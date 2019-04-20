@@ -1,8 +1,46 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  border: 1px solid purple;
+  background-color: #224DE3;
+  border-radius: 80px;
+  width: 75%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+
+}
+h3 {
+  color: #224DE3;
+}
+p {
+  color: #224DE3;
+
 }
 
-.App-logo {
+button {
+  background-color: #224DE3;
+  color: white;
+  border-radius: 20px;
+  margin: 2px;
+}
+
+.btnUpdate {
+  width: 50%;
+}
+
+.smurfBlock {
+  border: 1px solid purple;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -25,4 +63,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */

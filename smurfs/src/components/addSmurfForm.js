@@ -26,11 +26,6 @@ class AddSmurfForm extends React.Component {
         e.preventDefault();
         const newSmurf = this.state;
         this.props.addSmurf(newSmurf);
-        // this.setState({
-        //     name: '',
-        //     age: '',
-        //     height: ''
-        // })
         this.props.toggleAdding();
     }
 

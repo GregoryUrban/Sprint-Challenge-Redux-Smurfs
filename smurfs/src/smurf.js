@@ -20,11 +20,11 @@ class Smurf extends React.Component {
                     deleteSmurf={this.props.deleteSmurf}
                     toggleUpdate={this.makeUpdate} />
                 :
-                    <div>
-                    <h3>{this.props.smurf.name}</h3>
-                    <p>{this.props.smurf.age}</p>
-                    <p>{this.props.smurf.height}</p>
-                    <button onClick={this.makeUpdate}>Update or Delete</button>
+                    <div className='smurfBlock'>
+                    <h3>Smurf: {this.props.smurf.name}</h3>
+                    <p>Age: {this.props.smurf.age}</p>
+                    <p>Height: {this.props.smurf.height}</p>
+                    <button onClick={this.makeUpdate}>Fixit or Smurfit</button>
                     </div>
                 }
             </div>

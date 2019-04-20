@@ -24,10 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <AddSmurfForm addSmurf={this.props.addSmurf}/> */}
+        <button className='btnUpdate' onClick={this.toggleAdding}>Make more Smurf's</button>
         
         {this.props.smurfs.map(smurf => 
-        // <Smurf smurf={smurf} deleteSmurf={this.props.deleteSmurf} />
         <Smurf smurf={smurf} 
           deleteSmurf={this.props.deleteSmurf} 
           updateSmurf={this.props.updateSmurf} />)}
@@ -35,7 +34,7 @@ class App extends Component {
         {this.state.addingSmurf ? 
         <AddSmurfForm addSmurf={this.props.addSmurf} toggleAdding={this.toggleAdding}/>
         :
-        <button onClick={this.toggleAdding}>Make more Smurf's</button>
+        <button className='btnUpdate' onClick={this.toggleAdding}>Make more Smurf's</button>
         }
       </div>
     );
